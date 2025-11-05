@@ -1,0 +1,4 @@
+
+
+  <h1 class="text-sm font-normal font-[Satoshi-Variable]">Hello world!</h1>
+  <h2 class="text-sm font-medium font-[Satoshi-VariableItalic]">Hello world!</h2>
