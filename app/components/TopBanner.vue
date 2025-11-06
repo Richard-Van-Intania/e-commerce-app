@@ -3,7 +3,9 @@ function close() {}
 </script>
 
 <template>
-    <div class="h-[38px] bg-black flex items-center justify-between">
+    <div
+        class="h-[38px] max-sm:h-14 bg-black flex items-center justify-between"
+    >
         <div class="w-[120px]"></div>
         <div class="text-sm text-white font-[Satoshi-Variable] text-center">
             <span>Sign up and get 20% off to your first order.</span>
