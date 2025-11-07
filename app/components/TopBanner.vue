@@ -1,5 +1,6 @@
 <script setup lang="ts">
-function close() {}
+import { useBanner } from "~/composables";
+const banner = useBanner();
 </script>
 
 <template>
@@ -10,7 +11,7 @@ function close() {}
             <NuxtLink class="underline pl-2" to="/">Sign Up Now</NuxtLink>
         </div>
         <div class="w-[120px]">
-            <button type="button" class="cursor-pointer max-sm:hidden" v-on:click="close()">
+            <button type="button" class="cursor-pointer max-sm:hidden" v-on:click="banner = false">
                 <Icon name="ri:close-large-line" style="color: white" class="align-middle" />
             </button>
         </div>
