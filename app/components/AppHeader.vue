@@ -21,7 +21,7 @@ function test() {
         <div class="w-12"></div>
         <ButtonsNavText label="Brands" destination="/"></ButtonsNavText>
         <div class="w-12"></div>
-        <div class="flex-1 bg-cyan-500">max</div>
+        <SearchBar class="flex-1"></SearchBar>
         <div class="w-12"></div>
         <ButtonsNavIcon label="ri:shopping-cart-2-line" v-on:handle-click="test()"></ButtonsNavIcon>
         <div class="w-6"></div>
