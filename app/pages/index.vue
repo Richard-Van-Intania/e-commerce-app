@@ -34,6 +34,7 @@
         </div>
     </div>
     <div class="text-[48px] font-[integralcf-bold] text-center pt-12 pb-10 bg-amber-500">NEW ARRIVALS</div>
+    <div class="h-36 bg-amber-100"></div>
 </template>
 
 <style scoped></style>
