@@ -1,12 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const model = defineModel<string>();
+
+function handleEnterKey() {
+    alert(model.value);
+}
+</script>
 
 <template>
-    <form role="search">
-        <div class="relative inline-block w-full">
-            <Icon name="ri:search-line" style="color: #00000066" size="24px" class="absolute left-5 top-3" />
-            <input type="search" placeholder="Search for products..." aria-label="Search" class="w-full bg-search-grey h-12 rounded-full pl-14" />
+    <div class="flex items-center">
+        <div class="relative w-full">
+            <Icon name="ri:search-line" size="24px" class="absolute left-5 h-12 bg-blk-op-40" />
+            <input
+                v-model="model"
+                type="text"
+                placeholder="Search for products..."
+                class="w-full bg-search-grey h-12 rounded-full pl-14 pr-8 focus:outline-none placeholder:text-blk-op-40 placeholder:text-[16px] placeholder:font-[Satoshi-Variable] text-[18px] font-[Satoshi-Variable]"
+                v-on:keyup.enter="handleEnterKey()"
+            />
         </div>
-    </form>
+    </div>
 </template>
 
 <style scoped></style>
