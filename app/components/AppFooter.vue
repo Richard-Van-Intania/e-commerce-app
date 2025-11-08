@@ -30,7 +30,42 @@ function handleEnterKey() {
                 </div>
             </div>
         </div>
-        <div class="h-[504px] bg-search-grey pt-36 pb-32 px-20">foot bot</div>
+        <div class="h-[504px] bg-search-grey pt-36 pb-1 px-20">
+            <div class="flex justify-between">
+                <div class="flex flex-col">
+                    <div>SHOP.CO</div>
+                    <div>We have clothes that suits your style and which you’re proud to wear. From women to men.</div>
+                    <div>icon</div>
+                </div>
+                <div class="flex flex-col">
+                    <div>COMPANY</div>
+                    <div>A</div>
+                    <div>F</div>
+                    <div>W</div>
+                    <div>C</div>
+                </div>
+                <div class="flex flex-col">
+                    <div>COMPANY</div>
+                    <div>A</div>
+                    <div>F</div>
+                    <div>W</div>
+                    <div>C</div>
+                </div>
+                <div class="flex flex-col">
+                    <div>COMPANY</div>
+                    <div>A</div>
+                    <div>F</div>
+                    <div>W</div>
+                    <div>C</div>
+                </div>
+            </div>
+            <hr />
+            <div class="flex">
+                <div class="flex-1">S</div>
+                <div>v</div>
+                <div>M</div>
+            </div>
+        </div>
     </div>
 </template>
 

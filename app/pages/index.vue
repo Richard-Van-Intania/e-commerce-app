@@ -12,7 +12,7 @@
                 </div>
                 <div class="py-12 text-[16px] font-[Satoshi-Variable] text-blk-op-60 w-3/4">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</div>
                 <div><button type="button" class="h-[52px] w-[210px] rounded-full bg-black text-[16px] font-[Satoshi-Variable] font-medium text-white cursor-pointer" v-on:click="onClick()">Shop Now</button></div>
-                <div class="flex pt-12 gap-4 items-end">
+                <div class="flex pt-12 items-end">
                     <HomeCountBanner v-bind:count="200" label="International Brands"></HomeCountBanner>
                     <HomeVerticalDivider></HomeVerticalDivider>
                     <HomeCountBanner v-bind:count="2000" label="High-Quality Products"></HomeCountBanner>
