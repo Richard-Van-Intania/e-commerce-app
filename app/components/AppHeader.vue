@@ -5,7 +5,7 @@ function test() {
 </script>
 
 <template>
-    <div class="h-24 flex items-center">
+    <div class="h-24 flex items-center bg-white">
         <div class="w-20"></div>
         <NuxtLink class="text-[32px] font-[integralcf-bold]" to="/">SHOP.CO</NuxtLink>
         <div class="w-12"></div>
