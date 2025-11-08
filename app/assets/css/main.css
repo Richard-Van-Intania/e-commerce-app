@@ -22,5 +22,6 @@
 
 @theme {
     --color-search-grey: #f0f0f0;
-    --color-blk-op-40: #00000066;
+    --color-blk-op-40: rgba(0, 0, 0, 0.4);
+    --color-blk-op-60: rgba(0, 0, 0, 0.6);
 }

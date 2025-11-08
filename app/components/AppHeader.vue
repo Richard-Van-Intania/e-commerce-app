@@ -1,8 +1,4 @@
-<script setup lang="ts">
-function test() {
-    console.log("holaa");
-}
-</script>
+<script setup lang="ts"></script>
 
 <template>
     <div class="h-24 flex items-center bg-white">
@@ -23,9 +19,9 @@ function test() {
         <div class="w-12"></div>
         <SearchBar class="flex-1"></SearchBar>
         <div class="w-12"></div>
-        <ButtonsNavIcon label="ri:shopping-cart-2-line" v-on:handle-click="test()"></ButtonsNavIcon>
+        <ButtonsNavIcon label="ri:shopping-cart-2-line" v-on:handle-click="onClick()"></ButtonsNavIcon>
         <div class="w-6"></div>
-        <ButtonsNavIcon label="ri:account-circle-line" v-on:handle-click="test()"></ButtonsNavIcon>
+        <ButtonsNavIcon label="ri:account-circle-line" v-on:handle-click="onClick()"></ButtonsNavIcon>
         <div class="w-20"></div>
     </div>
 </template>
