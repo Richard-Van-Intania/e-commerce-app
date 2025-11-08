@@ -30,40 +30,55 @@ function handleEnterKey() {
                 </div>
             </div>
         </div>
-        <div class="h-[504px] bg-search-grey pt-36 pb-1 px-20">
+        <div class="bg-search-grey pt-36 pb-12 px-20">
             <div class="flex justify-between">
-                <div class="flex flex-col">
-                    <div>SHOP.CO</div>
-                    <div>We have clothes that suits your style and which you’re proud to wear. From women to men.</div>
-                    <div>icon</div>
+                <div class="flex flex-col max-w-[320px]">
+                    <div class="text-[32px] font-[integralcf-bold] leading-none">SHOP.CO</div>
+                    <div class="text-[14px] font-[Satoshi-Variable] text-blk-op-60 py-10">We have clothes that suits your style and which you’re proud to wear. From women to men.</div>
+                    <div class="flex gap-8">
+                        <FootersIconButton label="ri:twitter-fill" v-on:handle-click="onClick()"></FootersIconButton>
+                        <FootersIconButton label="ri:facebook-circle-fill" v-on:handle-click="onClick()"></FootersIconButton>
+                        <FootersIconButton label="ri:instagram-fill" v-on:handle-click="onClick()"></FootersIconButton>
+                        <FootersIconButton label="ri:github-fill" v-on:handle-click="onClick()"></FootersIconButton>
+                    </div>
                 </div>
                 <div class="flex flex-col">
-                    <div>COMPANY</div>
-                    <div>A</div>
-                    <div>F</div>
-                    <div>W</div>
-                    <div>C</div>
+                    <FootersSectionBanner label="COMPANY"></FootersSectionBanner>
+                    <FootersTextButton label="About" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Features" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Works" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Career" destination="/"></FootersTextButton>
                 </div>
                 <div class="flex flex-col">
-                    <div>COMPANY</div>
-                    <div>A</div>
-                    <div>F</div>
-                    <div>W</div>
-                    <div>C</div>
+                    <FootersSectionBanner label="HELP"></FootersSectionBanner>
+                    <FootersTextButton label="Customer Support" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Delivery Details" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Terms & Conditions" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Privacy Policy" destination="/"></FootersTextButton>
                 </div>
                 <div class="flex flex-col">
-                    <div>COMPANY</div>
-                    <div>A</div>
-                    <div>F</div>
-                    <div>W</div>
-                    <div>C</div>
+                    <FootersSectionBanner label="FAQ"></FootersSectionBanner>
+                    <FootersTextButton label="Account" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Manage Deliveries" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Orders" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Payments" destination="/"></FootersTextButton>
+                </div>
+                <div class="flex flex-col">
+                    <FootersSectionBanner label="RESOURCES"></FootersSectionBanner>
+                    <FootersTextButton label="Free eBooks" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Development Tutorial" destination="/"></FootersTextButton>
+                    <FootersTextButton label="How to - Blog" destination="/"></FootersTextButton>
+                    <FootersTextButton label="Youtube Playlist" destination="/"></FootersTextButton>
                 </div>
             </div>
-            <hr />
+            <div class="h-px bg-blk-op-10 my-8"></div>
             <div class="flex">
-                <div class="flex-1">S</div>
-                <div>v</div>
-                <div>M</div>
+                <div class="flex-1 text-[14px] font-[Satoshi-Variable] text-blk-op-60">Shop.co © 2000-2023, All Rights Reserved</div>
+                <FootersPayment source="/images/visa.png">v</FootersPayment>
+                <FootersPayment source="/images/maset.png">v</FootersPayment>
+                <FootersPayment source="/images/payp.png">v</FootersPayment>
+                <FootersPayment source="/images/apple.png">v</FootersPayment>
+                <FootersPayment source="/images/gplay.png">v</FootersPayment>
             </div>
         </div>
     </div>
