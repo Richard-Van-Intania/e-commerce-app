@@ -19,7 +19,7 @@
                     <HomeCountBanner v-bind:count="30000" label="Happy Customers"></HomeCountBanner>
                 </div>
             </div>
-            <div>2</div>
+            <div class="relative"><NuxtImg src="/Vector.png" height="56" class="absolute left-0 top-1/2" /><NuxtImg src="/Vector2.png" height="104" class="absolute right-1/10 top-1/10" /></div>
         </div>
     </div>
     <div class="h-[122px] bg-black">v</div>
