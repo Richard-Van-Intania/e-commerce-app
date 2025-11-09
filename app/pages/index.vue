@@ -1,6 +1,25 @@
 <script setup lang="ts">
 const items: ItemData[] = [{ source: "/items/image 7.png", label: "T-SHIRT WITH TAPE DETAILS", rating: 4.9, price: 120, discounted: 90 }];
 const { data, error, status } = await useFetch<ItemData[]>("/api/new-arrivals");
+const viewAll = useState<boolean>(() => false);
+
+const filteredItemData = computed<ItemData[]>(() => {
+    if (data.value) {
+        if (!viewAll.value) {
+            const list: ItemData[] = [];
+            for (let i = 0; i < data.value.length; i++) {
+                if (i < 4) {
+                    list.push(data.value[i]!);
+                }
+            }
+            return list;
+        } else {
+            return data.value;
+        }
+    } else {
+        return [];
+    }
+});
 </script>
 
 <template>
@@ -38,12 +57,17 @@ const { data, error, status } = await useFetch<ItemData[]>("/api/new-arrivals");
     </div>
     <HomeBigBanner label="NEW ARRIVALS"></HomeBigBanner>
     <div v-if="status === 'success'">
-        <div class="px-20 flex gap-6"><HomeItemCard v-for="(item, index) in data" v-bind:item="item" v-bind:key="index" v-on:handle-click="onClick(item.label)"></HomeItemCard></div>
+        <div class="px-20 flex gap-x-5 gap-y-14 flex-wrap"><HomeItemCard v-for="(item, index) in filteredItemData" v-bind:item="item" v-bind:key="index" v-on:handle-click="onClick(item.label)"></HomeItemCard></div>
     </div>
-    <div v-if="status === 'pending' || status === 'idle'"><div class="px-20 h-80 flex items-center">Loading..</div></div>
-    <div v-if="status === 'error' || error"><div class="px-20 h-80 flex items-center">Error!</div></div>
-    <div class="h-32"></div>
-    <HomeBigBanner label="TOP SELLING" class="bg-amber-100"></HomeBigBanner>
+    <div v-else-if="status === 'pending' || status === 'idle'"><div class="px-20 h-40 flex justify-center items-center">Loading..</div></div>
+    <div v-else-if="status === 'error' || error"><div class="px-20 h-40 flex justify-center items-center">Error!</div></div>
+    <div class="h-10"></div>
+    <div v-if="!viewAll" class="flex justify-center items-center">
+        <button type="button" class="w-[218px] bg-white h-[52px] rounded-full text-[16px] font-[Satoshi-Variable] font-medium cursor-pointer border border-blk-op-10" v-on:click="viewAll = true">View All</button>
+    </div>
+    <div class="h-10"></div>
+    <div class="px-20"><div class="h-px bg-blk-op-10"></div></div>
+    <HomeBigBanner label="TOP SELLING"></HomeBigBanner>
 </template>
 
 <style scoped></style>
