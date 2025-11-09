@@ -25,4 +25,6 @@
     --color-blk-op-10: rgba(0, 0, 0, 0.1);
     --color-blk-op-40: rgba(0, 0, 0, 0.4);
     --color-blk-op-60: rgba(0, 0, 0, 0.6);
+    --color-rd-op-10: rgba(255, 51, 51, 0.1);
+    --color-rd-op-100: rgba(255, 51, 51, 1);
 }

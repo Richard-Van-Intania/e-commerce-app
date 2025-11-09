@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const items: ItemData[] = [{ source: "/items/image 7.png", label: "T-SHIRT WITH TAPE DETAILS", rating: 4.5, price: 120, discounted: null }];
+const items: ItemData[] = [{ source: "/items/image 7.png", label: "T-SHIRT WITH TAPE DETAILS", rating: 4.9, price: 120, discounted: 90 }];
 </script>
 
 <template>
