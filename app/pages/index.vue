@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const items: ItemData[] = [{ source: "/items/image 7.png", label: "T-SHIRT WITH TAPE DETAILS", rating: 4.9, price: 120, discounted: 90 }];
+const { data, error, status } = await useFetch<ItemData[]>("/api/new-arrivals");
 </script>
 
 <template>
@@ -13,7 +14,7 @@ const items: ItemData[] = [{ source: "/items/image 7.png", label: "T-SHIRT WITH 
                     <div>YOUR STYLE</div>
                 </div>
                 <div class="py-12 text-[16px] font-[Satoshi-Variable] text-blk-op-60 w-3/4">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</div>
-                <div><button type="button" class="h-[52px] w-[210px] rounded-full bg-black text-[16px] font-[Satoshi-Variable] font-medium text-white cursor-pointer" v-on:click="onClick()">Shop Now</button></div>
+                <div><button type="button" class="h-[52px] w-[210px] rounded-full bg-black text-[16px] font-[Satoshi-Variable] font-medium text-white cursor-pointer" v-on:click="onClick('Shop Now')">Shop Now</button></div>
                 <div class="flex pt-12 items-end">
                     <HomeCountBanner v-bind:count="200" label="International Brands"></HomeCountBanner>
                     <HomeVerticalDivider></HomeVerticalDivider>
@@ -36,9 +37,12 @@ const items: ItemData[] = [{ source: "/items/image 7.png", label: "T-SHIRT WITH 
         </div>
     </div>
     <HomeBigBanner label="NEW ARRIVALS"></HomeBigBanner>
-    <div class="px-20 flex gap-1">
-        <HomeItemCard v-bind:item="items[0]!"></HomeItemCard>
+    <div v-if="status === 'success'">
+        <div class="px-20 flex gap-6"><HomeItemCard v-for="(item, index) in data" v-bind:item="item" v-bind:key="index" v-on:handle-click="onClick(item.label)"></HomeItemCard></div>
     </div>
+    <div v-if="status === 'pending' || status === 'idle'"><div class="px-20 h-80 flex items-center">Loading..</div></div>
+    <div v-if="status === 'error' || error"><div class="px-20 h-80 flex items-center">Error!</div></div>
+    <div class="h-32"></div>
     <HomeBigBanner label="TOP SELLING" class="bg-amber-100"></HomeBigBanner>
 </template>
 

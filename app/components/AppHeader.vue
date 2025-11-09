@@ -19,9 +19,9 @@
         <div class="w-12"></div>
         <SearchBar class="flex-1"></SearchBar>
         <div class="w-12"></div>
-        <ButtonsNavIcon label="ri:shopping-cart-2-line" v-on:handle-click="onClick()"></ButtonsNavIcon>
+        <ButtonsNavIcon label="ri:shopping-cart-2-line" v-on:handle-click="onClick('sssss')"></ButtonsNavIcon>
         <div class="w-6"></div>
-        <ButtonsNavIcon label="ri:account-circle-line" v-on:handle-click="onClick()"></ButtonsNavIcon>
+        <ButtonsNavIcon label="ri:account-circle-line" v-on:handle-click="onClick('sssss')"></ButtonsNavIcon>
         <div class="w-20"></div>
     </div>
 </template>

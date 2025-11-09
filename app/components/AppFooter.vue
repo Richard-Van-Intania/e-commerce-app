@@ -36,10 +36,10 @@ function handleEnterKey() {
                     <div class="text-[32px] font-[integralcf-bold] leading-none">SHOP.CO</div>
                     <div class="text-[14px] font-[Satoshi-Variable] text-blk-op-60 py-10">We have clothes that suits your style and which you’re proud to wear. From women to men.</div>
                     <div class="flex gap-8">
-                        <FootersIconButton label="ri:twitter-fill" v-on:handle-click="onClick()"></FootersIconButton>
-                        <FootersIconButton label="ri:facebook-circle-fill" v-on:handle-click="onClick()"></FootersIconButton>
-                        <FootersIconButton label="ri:instagram-fill" v-on:handle-click="onClick()"></FootersIconButton>
-                        <FootersIconButton label="ri:github-fill" v-on:handle-click="onClick()"></FootersIconButton>
+                        <FootersIconButton label="ri:twitter-fill" v-on:handle-click="onClick('ss')"></FootersIconButton>
+                        <FootersIconButton label="ri:facebook-circle-fill" v-on:handle-click="onClick('ssss')"></FootersIconButton>
+                        <FootersIconButton label="ri:instagram-fill" v-on:handle-click="onClick('ssss')"></FootersIconButton>
+                        <FootersIconButton label="ri:github-fill" v-on:handle-click="onClick('sss')"></FootersIconButton>
                     </div>
                 </div>
                 <div class="flex flex-col">

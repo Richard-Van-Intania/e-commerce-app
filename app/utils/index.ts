@@ -3,6 +3,6 @@ export const { format: formatNumber } = Intl.NumberFormat("en-US", {
   useGrouping: true,
 });
 
-export function onClick(): void {
-  alert("clicked jaaa!");
+export function onClick(message: string): void {
+  alert(message);
 }
