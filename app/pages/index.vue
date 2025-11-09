@@ -26,11 +26,11 @@
     </div>
     <div class="px-20 py-14 bg-black">
         <div class="flex justify-between">
-            <NuxtImg src="/images/ver.png" height="32" />
-            <NuxtImg src="/images/zara-logo-1 1.png" height="38" />
-            <NuxtImg src="/images/gucci-logo-1 1.png" height="36" />
-            <NuxtImg src="/images/prada-logo-1 1.png" height="32" />
-            <NuxtImg src="/images/cal.png" height="32" />
+            <NuxtImg src="/brands/ver.png" height="32" />
+            <NuxtImg src="/brands/zara-logo-1 1.png" height="38" />
+            <NuxtImg src="/brands/gucci-logo-1 1.png" height="36" />
+            <NuxtImg src="/brands/prada-logo-1 1.png" height="32" />
+            <NuxtImg src="/brands/cal.png" height="32" />
         </div>
     </div>
     <div class="text-[48px] font-[integralcf-bold] text-center pt-12 pb-10 bg-amber-500">NEW ARRIVALS</div>

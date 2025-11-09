@@ -74,11 +74,11 @@ function handleEnterKey() {
             <div class="h-px bg-blk-op-10 my-8"></div>
             <div class="flex">
                 <div class="flex-1 text-[14px] font-[Satoshi-Variable] text-blk-op-60">Shop.co © 2000-2023, All Rights Reserved</div>
-                <FootersPayment source="/images/visa.png"></FootersPayment>
-                <FootersPayment source="/images/maset.png"></FootersPayment>
-                <FootersPayment source="/images/payp.png"></FootersPayment>
-                <FootersPayment source="/images/apple.png"></FootersPayment>
-                <FootersPayment source="/images/gplay.png"></FootersPayment>
+                <FootersPayment source="/payments/visa.png"></FootersPayment>
+                <FootersPayment source="/payments/maset.png"></FootersPayment>
+                <FootersPayment source="/payments/payp.png"></FootersPayment>
+                <FootersPayment source="/payments/apple.png"></FootersPayment>
+                <FootersPayment source="/payments/gplay.png"></FootersPayment>
             </div>
         </div>
     </div>
