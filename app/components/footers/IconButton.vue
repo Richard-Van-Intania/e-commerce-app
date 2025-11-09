@@ -10,6 +10,6 @@ const emit = defineEmits<{
 
 <template>
     <button type="button" class="cursor-pointer" v-on:click="emit('handle-click')">
-        <Icon v-bind:name="props.label" size="32" class="align-middle" />
+        <Icon v-bind:name="props.label" size="32px" class="align-middle" />
     </button>
 </template>

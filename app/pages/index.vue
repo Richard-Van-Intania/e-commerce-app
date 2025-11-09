@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const items: ItemData[] = [{ source: "/items/image 7.png", label: "T-SHIRT WITH TAPE DETAILS", rating: 4.5, price: 120, discounted: null }];
+</script>
 
 <template>
     <div class="relative">
@@ -33,8 +35,11 @@
             <NuxtImg src="/brands/cal.png" height="32" />
         </div>
     </div>
-    <div class="text-[48px] font-[integralcf-bold] text-center pt-12 pb-10 bg-amber-500">NEW ARRIVALS</div>
-    <div class="h-36 bg-amber-100"></div>
+    <HomeBigBanner label="NEW ARRIVALS"></HomeBigBanner>
+    <div class="px-20 flex gap-1">
+        <HomeItemCard v-bind:item="items[0]!"></HomeItemCard>
+    </div>
+    <HomeBigBanner label="TOP SELLING" class="bg-amber-100"></HomeBigBanner>
 </template>
 
 <style scoped></style>
