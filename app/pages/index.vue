@@ -1,20 +1,37 @@
 <script setup lang="ts">
-const items: ItemData[] = [{ source: "/items/image 7.png", label: "T-SHIRT WITH TAPE DETAILS", rating: 4.9, price: 120, discounted: 90 }];
-const { data, error, status } = await useFetch<ItemData[]>("/api/new-arrivals");
-const viewAll = useState<boolean>(() => false);
-
-const filteredItemData = computed<ItemData[]>(() => {
-    if (data.value) {
-        if (!viewAll.value) {
+const { data: newData, error: newError, status: newStatus } = await useFetch<ItemData[]>("/api/new-arrivals");
+const { data: topData, error: topError, status: topStatus } = await useFetch<ItemData[]>("/api/top-selling");
+const newViewAll = useState<boolean>(() => false);
+const topViewAll = useState<boolean>(() => false);
+const newFilteredItemData = computed<ItemData[]>(() => {
+    if (newData.value) {
+        if (!newViewAll.value) {
             const list: ItemData[] = [];
-            for (let i = 0; i < data.value.length; i++) {
+            for (let i = 0; i < newData.value.length; i++) {
                 if (i < 4) {
-                    list.push(data.value[i]!);
+                    list.push(newData.value[i]!);
                 }
             }
             return list;
         } else {
-            return data.value;
+            return newData.value;
+        }
+    } else {
+        return [];
+    }
+});
+const topFilteredItemData = computed<ItemData[]>(() => {
+    if (topData.value) {
+        if (!topViewAll.value) {
+            const list: ItemData[] = [];
+            for (let i = 0; i < topData.value.length; i++) {
+                if (i < 4) {
+                    list.push(topData.value[i]!);
+                }
+            }
+            return list;
+        } else {
+            return topData.value;
         }
     } else {
         return [];
@@ -56,14 +73,14 @@ const filteredItemData = computed<ItemData[]>(() => {
         </div>
     </div>
     <HomeBigBanner label="NEW ARRIVALS"></HomeBigBanner>
-    <div v-if="status === 'success'">
-        <div class="px-20 flex gap-x-5 gap-y-14 flex-wrap"><HomeItemCard v-for="(item, index) in filteredItemData" v-bind:item="item" v-bind:key="index" v-on:handle-click="onClick(item.label)"></HomeItemCard></div>
+    <div v-if="newStatus === 'success'">
+        <div class="px-20 flex gap-x-5 gap-y-14 flex-wrap"><HomeItemCard v-for="(item, index) in newFilteredItemData" v-bind:item="item" v-bind:key="index" v-on:handle-click="onClick(item.label)"></HomeItemCard></div>
     </div>
-    <div v-else-if="status === 'pending' || status === 'idle'"><div class="px-20 h-40 flex justify-center items-center">Loading..</div></div>
-    <div v-else-if="status === 'error' || error"><div class="px-20 h-40 flex justify-center items-center">Error!</div></div>
+    <div v-else-if="newStatus === 'pending' || newStatus === 'idle'"><div class="px-20 h-40 flex justify-center items-center">Loading..</div></div>
+    <div v-else-if="newStatus === 'error' || newError"><div class="px-20 h-40 flex justify-center items-center">Error!</div></div>
     <div class="h-10"></div>
-    <div v-if="!viewAll" class="flex justify-center items-center">
-        <button type="button" class="w-[218px] bg-white h-[52px] rounded-full text-[16px] font-[Satoshi-Variable] font-medium cursor-pointer border border-blk-op-10" v-on:click="viewAll = true">View All</button>
+    <div v-if="!newViewAll" class="flex justify-center items-center">
+        <button type="button" class="w-[218px] bg-white h-[52px] rounded-full text-[16px] font-[Satoshi-Variable] font-medium cursor-pointer border border-blk-op-10" v-on:click="newViewAll = true">View All</button>
     </div>
     <div class="h-10"></div>
     <div class="px-20"><div class="h-px bg-blk-op-10"></div></div>
