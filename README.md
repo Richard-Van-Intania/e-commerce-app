@@ -7,3 +7,7 @@ npm run dev
 
 
 npm run build
+
+
+
+history -p
