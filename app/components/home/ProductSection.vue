@@ -36,7 +36,7 @@ const filteredItemData = computed<ItemData[]>(() => {
     <div class="h-40 flex justify-center items-center"><Icon name="ri:error-warning-line" size="48px" class="align-middle" /></div>
   </div>
   <div class="h-10"></div>
-  <div v-if="!viewAll" class="flex justify-center items-center">
+  <div v-if="!viewAll && data && data.length > 4" class="flex justify-center items-center">
     <button type="button" class="w-[218px] bg-white h-[52px] rounded-full text-[16px] font-[Satoshi-Variable] font-medium cursor-pointer border border-blk-op-10" v-on:click="viewAll = true">View All</button>
   </div>
 </template>
