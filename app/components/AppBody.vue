@@ -4,7 +4,7 @@ const banner = useBanner();
 </script>
 
 <template>
-    <div v-if="banner" class="h-[38px]"></div>
-    <div class="h-24"></div>
-    <slot></slot>
+  <div v-if="banner" class="h-[38px]"></div>
+  <div class="h-24"></div>
+  <slot></slot>
 </template>

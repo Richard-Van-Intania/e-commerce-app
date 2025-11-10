@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "Satoshi-Variable";
-    src: url("/fonts/satoshi/Satoshi-Variable.woff2") format("woff2");
-    font-weight: 300 900;
-    font-display: swap;
-    font-style: normal;
+  font-family: "Satoshi-Variable";
+  src: url("/fonts/satoshi/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "integralcf-bold";
-    src: url("/fonts/integral-cf/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
+  font-family: "integralcf-bold";
+  src: url("/fonts/integral-cf/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
 }
 
 @theme {
-    --color-search-grey: #f0f0f0;
-    --color-blk-op-10: rgba(0, 0, 0, 0.1);
-    --color-blk-op-40: rgba(0, 0, 0, 0.4);
-    --color-blk-op-60: rgba(0, 0, 0, 0.6);
-    --color-rd-op-10: rgba(255, 51, 51, 0.1);
-    --color-rd-op-100: rgba(255, 51, 51, 1);
+  --color-search-grey: #f0f0f0;
+  --color-blk-op-10: rgba(0, 0, 0, 0.1);
+  --color-blk-op-40: rgba(0, 0, 0, 0.4);
+  --color-blk-op-60: rgba(0, 0, 0, 0.6);
+  --color-rd-op-10: rgba(255, 51, 51, 0.1);
+  --color-rd-op-100: rgba(255, 51, 51, 1);
 }
