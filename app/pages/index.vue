@@ -37,6 +37,8 @@
   <div class="px-20 pt-10"><div class="h-px bg-blk-op-10"></div></div>
   <div class="px-20"><HomeProductSection label="TOP SELLING" source="/api/top-selling"></HomeProductSection></div>
   <div class="h-10"></div>
+  <div class="px-20"><HomeStyleCard></HomeStyleCard></div>
+  <div class="h-10"></div>
 </template>
 
 <style scoped></style>
